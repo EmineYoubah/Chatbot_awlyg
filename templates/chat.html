@@ -1,0 +1,208 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Awlyg</title>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"/>
+	</head>
+	
+	
+	<body>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">		
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="static/aw.png" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>ChatBot</span>
+									<p>Awlyg Tech</p>
+								</div>
+							</div>
+						</div>
+						<div id="messageFormeight" class="card-body msg_card_body">
+							
+							
+						</div>
+						<div class="card-footer">
+							<form id="messageArea" class="input-group">
+                                <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+								<div class="input-group-append">
+									<button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$("#messageArea").on("submit", function(event) {
+					const date = new Date();
+					const hour = date.getHours();
+					const minute = date.getMinutes();
+					const str_time = hour+":"+minute;
+					var rawText = $("#text").val();
+
+					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
+					
+					$("#text").val("");
+					$("#messageFormeight").append(userHtml);
+
+
+
+					$.ajax({
+						data: {
+							msg: rawText,	
+						},
+						type: "POST",
+						url: "/get",
+					}).done(function(data) {
+
+                        var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="static/aw.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data[0] + '<span class="msg_time">' + str_time + '</span></div></div>';
+                       var reseau = '<div class="d-flex justify-content-start mb-4"><div class="msg_cotainer"> <a href="https://www.linkedin.com/company/awlyg/" target="_blank"><i>linkedin</i> </a></div><div class="msg_cotainer"> <a href="https://www.facebook.com/people/AWLYG-TECH/100085017832666/" target="_blank"><i>facebook</i></a> </div><div class="msg_cotainer"> <a href="https://www.youtube.com/@awlygtech" target="_blank"><i>youtube</i></a> </div></div>';
+                        var  contact='<div class="d-flex justify-content-start mb-4"><div class="msg_cotainer"> <i>Tel: +222 47077107</i> </div><div class="msg_cotainer"><i>Email: contact@awlyg.tech</i> </div><div class="msg_cotainer"> <i>Adresse: IIot No: 347 Av. Moktar Ould Daddah</i> </div></div>';
+                        var urlvideo ="static/oo.mp4";
+
+
+
+                        var oneVideoSimple = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><video src="' + urlvideo + '" class="div_vid" controls autoplay></video></span></div></div>';
+                        if(data[1]=="definition"){
+                            $("#messageFormeight").append($.parseHTML(oneVideoSimple));
+
+                        }
+                        $("#messageFormeight").append($.parseHTML(botHtml));
+
+                        var bout=''
+
+
+
+
+                         var text = "";
+                            var pil = "";
+
+                         var descr = '<span class="d-flex justify-content-start mb-4"><span class="msg_cotainer">' + text + '</span></span>';
+                         var descr2 = '<span class="d-flex justify-content-start mb-4"><span class="msg_cotainer">' + text + '</span></span>';
+                            var image = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie">' + descr + '</span></div><div><span><img src="' + pil + '" class="div_galerie">' + descr + '</span></div></div>';
+                            var imageSimple = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie"></span></div><div><span><img src="' + pil + '" class="div_galerie"></span></div></div>';
+                        var oneimage = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie">' + descr + '</span></div></div>';
+                        var oneimageSimple = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie"></span></div></div>';
+
+                        function metajouonima (text,pil){
+                            descr = '<span class="d-flex justify-content-start mb-4"><span class="msg_cotainer">' + text + '</span></span>';
+                               oneimage = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie">' + descr + '</span></div></div>';
+                        }
+                        function metajouonimaSimp (pil){
+                              oneimageSimple = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil + '" class="div_galerie"></span></div></div>';
+
+                       }
+
+
+                         function mettreAJourVariables(text1,text2,pil1,pil2) {
+                             descr = '<span class="d-flex justify-content-start mb-4"><span class="msg_cotainer">' + text1 + '</span></span>';
+                             descr2 = '<span class="d-flex justify-content-start mb-4"><span class="msg_cotainer">' + text2 + '</span></span>';
+                             image = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil1 + '" class="div_galerie">' + descr + '</span></div><div><span><img src="' + pil2 + '" class="div_galerie">' + descr2 + '</span></div></div>';
+
+                       }
+
+                       function mettreAJourVariables2(pil1,pil2) {
+                           imageSimple = '<div class="d-flex justify-content-start mb-4"><div class="rep_bloc"><span><img src="' + pil1 + '" class="div_galerie"></span></div><div><span><img src="' + pil2 + '" class="div_galerie"></span></div></div>';
+
+                       }
+
+                        var litebi=[]
+                        if (data[1]=="images"){
+                       litebi =[
+                           ["static/galerie/01.jpg",""],
+                            ["static/galerie/02.jpg",""],
+                           ["static/galerie/03.jpg",""],
+                           ["static/galerie/04.jpg",""],
+                           ["static/galerie/05.jpg",""],
+                        ]
+                        }
+
+
+                        if(litebi.length!=0){
+
+                            if(litebi.length %2 ==0){
+                                for (i =0;litebi.length;i+=2){
+
+                            if(litebi[i][1]!=''){
+
+                                mettreAJourVariables(litebi[i][1],litebi[i+1][1],litebi[i][0],litebi[i+1][0]);
+                                $("#messageFormeight").append($.parseHTML(image));
+
+                            }else {
+                                {#pil=litebi[i][0];#}
+                                mettreAJourVariables2(litebi[i][0],litebi[i+1][0])
+                                $("#messageFormeight").append($.parseHTML(imageSimple));
+
+                            }
+                            }
+                            }else{
+
+                                for (var i =0;i<litebi.length;i+=2){
+                                     if(i+1===litebi.length){
+                                 i+=1;
+                                 if(litebi[i-1][1]!=''){
+                                 metajouonima(litebi[i-1][1],litebi[i-1][0]);
+                                $("#messageFormeight").append($.parseHTML(oneimage));
+                                 }else{
+                                     metajouonimaSimp(litebi[i-1][0]);
+                                $("#messageFormeight").append($.parseHTML(oneimageSimple));
+
+                                 }
+
+
+                                }
+
+                            if(litebi[i][1]!=''){
+
+                                mettreAJourVariables(litebi[i][1],litebi[i+1][1],litebi[i][0],litebi[i+1][0]);
+                                $("#messageFormeight").append($.parseHTML(image));
+
+                            }else {
+                                {#pil=litebi[i][0];#}
+                                mettreAJourVariables2(litebi[i][0],litebi[i+1][0])
+                                $("#messageFormeight").append($.parseHTML(imageSimple));
+
+                            };
+
+
+                                }
+                            }
+                            ;
+                            // Faites défiler vers le bas après l'ajout de la réponse du bot
+                        $("#messageFormeight").animate({
+                         scrollTop: $("#messageFormeight")[0].scrollHeight
+                        }, 500);
+                        }
+
+
+
+                         // Faites défiler vers le bas après l'ajout de la réponse du bot
+                        $("#messageFormeight").animate({
+                         scrollTop: $("#messageFormeight")[0].scrollHeight
+                        }, 500);
+					});
+					event.preventDefault();
+				});
+			});
+		</script>
+        
+    </body>
+</html>

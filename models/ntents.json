@@ -1,0 +1,310 @@
+{
+   "intents":[
+{
+   "tag": "salutation",
+   "patterns": [
+      "salut",
+      "bonjour",
+      "ça va?",
+      "hello",
+      "coucou",
+      "bonsoir",
+      "hey",
+      "hi",
+      "comment ça va?",
+      "quoi de neuf?"
+   ],
+   "responses": [
+      "Salut! Comment puis-je t'aider aujourd'hui?",
+      "Bonjour! Si tu as des questions, n'hésite pas.",
+      "Coucou! Besoin d'assistance?",
+      "Hello! Comment puis-je te servir?",
+      "Salut, ça va bien merci! Et toi?",
+      "Hey! Si tu as des requêtes, fais-le moi savoir.",
+      "Bonjour! Quoi de neuf?",
+      "Salut! Si tu as besoin d'aide, je suis là.",
+      "Coucou! Des questions ou préoccupations?",
+      "Hello! Comment puis-je rendre ta journée meilleure?"
+   ],
+   "context_set": ""
+},
+{
+   "tag": "au_revoir",
+   "patterns": [
+      "au revoir",
+      "bye",
+      "ciao",
+      "à bientôt",
+      "à plus tard",
+      "salut",
+      "adieu",
+      "à la prochaine",
+      "bonne journée",
+      "bonne soirée"
+   ],
+   "responses": [
+      "Au revoir! N'hésite pas à revenir si tu as d'autres questions.",
+      "Bye! Si tu as besoin de plus d'infos, je suis là.",
+      "Ciao! À la prochaine fois!",
+      "À bientôt! Si quelque chose te préoccupe, reviens nous voir.",
+      "À plus tard! Si tu as des questions, je suis là pour y répondre.",
+      "Salut! Si tu as besoin d'aide, n'hésite pas.",
+      "Adieu! J'espère te revoir bientôt.",
+      "À la prochaine! Si tu as des questions, fais-moi signe.",
+      "Bonne journée! Si tu as des préoccupations, n'hésite pas à les partager.",
+      "Bonne soirée! Reviens si tu as besoin de quelque chose."
+   ],
+   "context_set": ""
+},{
+   "tag": "projets_réalisés",
+   "patterns": [
+      "projets réalisés",
+      "travaux accomplis",
+      "réalisations",
+      "projets achevés",
+      "expérience professionnelle",
+      "historique de projets",
+      "quels projets avez-vous faits",
+      "montrez-moi vos réalisations"
+   ],
+   "responses": [
+      "On a réalisé avec succès plus de 10 projets variés, démontrant notre expertise et notre engagement envers l'excellence.",
+      "Avec une expérience riche, on a mené à bien plus de 10 projets, témoignant de notre compétence dans divers domaines.",
+      "Nos réalisations comprennent avec succès la gestion de plus de 10 projets, reflétant notre savoir-faire et notre professionnalisme.",
+      "On a réussi à compléter avec succès plus de 10 projets, illustrant notre engagement envers la qualité et la satisfaction du client.",
+      "Fort d'une expérience diversifiée, on a achevé avec succès plus de 10 projets, attestant de notre capacité à relever des défis variés."
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "definition",
+   "patterns": [
+      "À propos de votre entreprise",
+      "AWLYG TECH en quelques mots",
+      "Qui etes-nous",
+      "Description de l'entreprise",
+      "Présentation de AWLYG TECH",
+      "Parlez-nous de votre entreprise",
+      "Donnez-nous une idée d'AWLYG TECH",
+      "Qu'est-ce que AWLYG TECH fait",
+      "Expliquez AWLYG TECH"
+   ],
+   "responses": [
+      "AWLYG TECH est une entreprise de prestation de services spécialisée dans le numérique créée en 2022. Nous nous concentrons sur la fourniture des solutions pour aider nos clients à améliorer leur efficacité et leur productivité dans le numérique.",
+      "Fondée en 2022, AWLYG TECH est une entreprise axée sur la prestation de services numériques. Nous nous efforçons de fournir des solutions innovantes pour optimiser l'efficacité et la productivité de nos clients dans le domaine numérique.",
+      "AWLYG TECH, créée en 2022, est une entreprise de services numériques engagée à offrir des solutions exceptionnelles. Notre objectif est d'optimiser l'efficacité et la productivité de nos clients grâce à des services numériques de pointe."
+   ],
+   "context_set": ""
+},
+{
+   "tag": "pourquoi",
+   "patterns": [
+      "Pourquoi choisir AWLYG TECH",
+      "Raisons de choisir AWLYG TECH",
+      "Qu'est-ce qui distingue AWLYG TECH",
+      "Avantages de choisir AWLYG TECH",
+      "Pourquoi préférer AWLYG TECH",
+      "Pourquoi AWLYG TECH est la meilleure option",
+      "Les raisons pour lesquelles je choisis AWLYG TECH"
+   ],
+   "responses": [
+      "AWLYG TECH se caracterise par des solutions avec hardware maîtrisées",
+      "AWLYG TECH se démarque par la présence sur toute la chaîne de production",
+      "AWLYG TECH se démarque par la qualité de ses produits et Support technique disponible et efficace",
+      "AWLYG TECH se démarque par la qualité de ses produits, des solutions maîtrisées avec un hardware de pointe, une présence sur toute la chaîne de production et un support technique disponible et efficace."
+   ],
+   "context_set": ""
+},{
+   "tag": "services",
+   "patterns": [
+      
+      "Quels services AWLYG TECH propose-t-il",
+      "En savoir plus sur les services offerts par AWLYG TECH",
+      "Services disponibles chez AWLYG TECH",
+      "Besoin d'informations sur les services d'AWLYG TECH"
+   ],
+   "responses": [
+      "Nous sommes une entreprise de services numériques spécialisée dans le développement de sites web, d’applications mobiles, et la gestion de projets informatiques.",
+      "AWLYG TECH propose une gamme de services incluant le développement de sites web, la création d'applications mobiles, et la gestion de projets informatiques."
+   ],
+   "context_set": ""
+},{
+   "tag": "serviceswebmobil",
+   "patterns": [
+      "Services web et mobiles chez AWLYG TECH",
+      "Informations sur les services web et mobiles d'AWLYG TECH",
+      "Développement d'applications web et mobiles par AWLYG TECH",
+      "Services pour applications web et mobiles chez AWLYG TECH"
+   ],
+   "responses": [
+      "Chez AWLYG TECH, nous avons une équipe de développeurs expérimentés qui se consacrent à la création d'applications web et mobiles sur mesure pour nos clients. Notre expertise en développement d'applications nous permet de proposer des solutions personnalisées qui répondent aux besoins spécifiques de votre entreprise. Qu'il s'agisse de développer une application de gestion des ressources, une plateforme de commerce électronique ou une application mobile pour engager votre audience, AWLYG TECH est le partenaire idéal pour mener à bien votre projet.",
+      "AWLYG TECH excelle dans le développement d'applications web et mobiles sur mesure. Notre équipe dédiée travaille en étroite collaboration avec nos clients pour fournir des solutions qui répondent précisément à leurs besoins.",
+      "Les services web et mobiles d'AWLYG TECH sont conçus pour offrir des solutions technologiques innovantes. Nous sommes spécialisés dans le développement d'applications personnalisées pour répondre aux exigences spécifiques de votre entreprise."
+   ],
+   "context_set": ""
+},{
+   "tag": "solmat",
+   "patterns": [
+      "Solutions matérielles par AWLYG TECH",
+      "Informations sur les solutions matérielles d'AWLYG TECH",
+      "Intégration de solutions matérielles par AWLYG TECH",
+      "Services incluant des composants matériels par AWLYG TECH"
+   ],
+   "responses": [
+      "AWLYG TECH se démarque par sa capacité à intégrer des solutions matérielles dans divers projets. Que vous ayez besoin d'un Jetson Nano ou de tout autre composant matériel spécifique, notre équipe de professionnels saura piloter et installer des systèmes adaptés pour compléter votre solution. Grâce à notre expertise dans la manipulation et la configuration de divers équipements, nous sommes en mesure de proposer des solutions complètes et cohérentes, répondant aux besoins de votre entreprise.",
+      "Les solutions matérielles proposées par AWLYG TECH sont conçues pour offrir une intégration transparente dans votre environnement. Nous nous spécialisons dans la sélection et la configuration des composants matériels pour garantir des performances optimales de votre solution globale.",
+      "AWLYG TECH offre des services complets qui incluent des solutions matérielles pour répondre aux défis technologiques spécifiques de votre entreprise. Notre équipe d'experts assure une intégration harmonieuse et une performance fiable de vos systèmes."
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "solai",
+   "patterns": [
+      "Solutions d'intelligence artificielle par AWLYG TECH",
+      "Informations sur les solutions AI d'AWLYG TECH",
+      "Intégration d'intelligence artificielle par AWLYG TECH",
+      "Services incluant des solutions AI par AWLYG TECH"
+   ],
+   "responses": [
+      "L'intelligence artificielle (IA) est en train de révolutionner le paysage technologique mondial. Chez AWLYG TECH, nous sommes à la pointe de cette révolution, offrant à nos clients des solutions d'IA innovantes pour les aider à prendre des décisions éclairées et à automatiser leurs processus métier. Notre expertise en IA nous permet de concevoir et développer des solutions personnalisées pour répondre aux défis uniques de votre entreprise.",
+      "AWLYG TECH se distingue par son engagement envers l'excellence dans le domaine de l'intelligence artificielle. Nos solutions AI sont conçues pour apporter une valeur ajoutée à votre entreprise, en améliorant l'efficacité opérationnelle et en ouvrant de nouvelles possibilités stratégiques.",
+      "Chez AWLYG TECH, nous comprenons l'importance de l'intelligence artificielle dans le monde des affaires d'aujourd'hui. Nos solutions AI sont conçues pour être évolutives, flexibles et adaptées à vos besoins spécifiques, offrant ainsi une approche personnalisée pour maximiser les avantages de l'IA dans votre entreprise."
+   ],
+   "context_set": ""
+},
+{
+   "tag": "hebgesser",
+   "patterns": [
+      "Services d'hébergement cloud par AWLYG TECH",
+      "Informations sur la gestion de serveurs cloud par AWLYG TECH",
+      "Hébergement et support de serveurs par AWLYG TECH",
+      "Services de gestion de serveurs cloud chez AWLYG TECH"
+   ],
+   "responses": [
+      "AWLYG TECH propose des services d'hébergement cloud, de support et de maintenance des serveurs pour garantir la disponibilité et la sécurité de vos applications et données. Notre équipe d'experts en infrastructure cloud se charge de la gestion et de l'optimisation de vos serveurs, vous permettant ainsi de vous concentrer sur votre activité principale. Nous offrons également un support technique réactif pour résoudre rapidement les problèmes et assurer un fonctionnement sans faille de votre infrastructure cloud.",
+      "La gestion de serveurs cloud est au cœur de notre expertise chez AWLYG TECH. Nos services couvrent l'hébergement, la surveillance, la sauvegarde et la gestion proactive de vos serveurs, offrant une solution complète pour répondre à vos besoins en matière d'infrastructure informatique.",
+      "Chez AWLYG TECH, nous comprenons l'importance de l'hébergement et de la gestion efficace des serveurs cloud. Nos services sont conçus pour être flexibles, sécurisés et évolutifs, offrant ainsi une solution complète pour répondre aux exigences changeantes de votre entreprise."
+   ],
+   "context_set": ""
+},
+{
+   "tag": "images",
+   "patterns": [
+      "Auriez-vous des images à partager?",
+      "Pouvez-vous me montrer quelques photos?",
+      "Avez-vous une galerie d'images générales?",
+      "Montrez-moi des images de votre entreprise.",
+      "Y a-t-il des photos disponibles?",
+      "Peux-tu me donner un aperçu visuel de votre entreprise?"
+   ],
+   "responses": [
+      "Bien sûr, voici quelques images générales.",
+      "Voici des photos pour vous donner un aperçu visuel de notre entreprise.",
+      "D'accord, voici quelques images à partager.",
+      "Bien sûr, nous avons une galerie d'images générales que vous pouvez consulter.",
+      "OK, voici quelques photos pour vous montrer notre environnement de travail.",
+      "Bien sûr, voici un aperçu visuel de notre entreprise."
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "devis",
+   "patterns": [
+      "Pouvez-vous m'envoyer un devis?",
+      "Quel est le prix de vos services?",
+      "Avez-vous des informations sur les tarifs?",
+      "Pouvez-vous me fournir une estimation?",
+      "Comment puis-je obtenir un devis?",
+      "Parlez-moi de vos tarifs et devis.",
+      "Quel serait le coût de vos services?",
+      "Devis, prix, facture - pouvez-vous m'informer?"
+   ],
+   "responses": [
+      "Pour obtenir un devis, veuillez nous envoyer un email à contact@awlyg.tech, ou remplir le formulaire de contact sur notre site web.",
+      "Pour des informations détaillées sur les tarifs, veuillez nous contacter par email à contact@awlyg.tech.",
+      "Nous serions ravis de discuter des détails et de vous fournir un devis personnalisé. Envoyez-nous simplement un email à contact@awlyg.tech.",
+      "Les devis peuvent être obtenus en nous contactant via notre site web ou par email à contact@awlyg.tech."
+   ],
+   "context_set": ""
+}
+,
+{
+   "tag": "technologies",
+   "patterns": [
+      "Quelles sont les technologies que vous utilisez?",
+      "Pouvez-vous me parler des technologies que vous employez?",
+      "Sur quelles technologies vous basez-vous?",
+      "Quels sont les langages de programmation que vous utilisez?",
+      "Parlez-moi des outils technologiques que vous utilisez.",
+      "Quels frameworks sont utilisés dans vos projets?",
+      "Avez-vous une préférence pour certaines technologies?"
+   ],
+   "responses": [
+      "Nous utilisons une variété de technologies pour répondre aux besoins spécifiques de chaque projet, notamment PHP Laravel, Redis, Node.js, PostgreSQL, Angular, Socket.IO, Python et Docker.",
+      "Nos choix technologiques incluent PHP Laravel, Redis, Node.js, PostgreSQL, Angular, Socket.IO, Python et Docker, mais nous sommes flexibles et ouverts à d'autres technologies selon les besoins.",
+      "Les technologies que nous employons comprennent PHP Laravel, Redis, Node.js, PostgreSQL, Angular, Socket.IO, Python et Docker. Nous restons à l'affût des dernières tendances pour garantir des solutions modernes et performantes.",
+      "Nous sommes constamment à jour avec les dernières technologies. Actuellement, nous utilisons des langages tels que PHP, Node.js, Python, ainsi que des bases de données comme PostgreSQL. Notre objectif est de toujours offrir des solutions technologiquement avancées."
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "portfolio",
+   "patterns": [
+      "Pouvez-vous me montrer votre portfolio?",
+      "Avez-vous des exemples de projets déjà réalisés?",
+      "Parlez-moi de vos réalisations passées.",
+      "Pouvez-vous partager des informations sur vos projets antérieurs?",
+      "Montrez-moi vos projets terminés.",
+      "Portfolio projet livrés",
+      "Liste de vos réalisations passées"
+   ],
+   "responses": [
+      "Voici la liste des projets que nous avons déjà livrés :",
+      "Nous sommes fiers de vous présenter quelques-uns de nos projets livrés :",
+      "Explorez notre portfolio qui comprend les projets suivants :",
+      "Nous avons achevé avec succès les projets suivants :"
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "contact",
+   "patterns": [
+      "Comment puis-je vous contacter?",
+      "Quels sont vos coordonnées?",
+      "Besoin de vous joindre",
+      "Parlez-moi de vos informations de contact",
+      "Comment puis-je entrer en contact avec vous?",
+      "Contactez-nous",
+      "Coordonnées"
+   ],
+   "responses": [
+      "Vous pouvez nous contacter aux coordonnées suivantes :",
+      "N'hésitez pas à nous joindre aux points de contact suivants :",
+      "Pour nous contacter, utilisez les informations suivantes :",
+      "Si vous avez besoin de nous contacter, voici nos coordonnées :"
+   ],
+   "context_set": ""
+}
+,{
+   "tag": "social_media",
+   "patterns": [
+      "Quels sont vos réseaux sociaux?",
+      "Pouvez-vous me donner vos médias sociaux?",
+      "Sur quels réseaux sociaux êtes-vous?",
+      "Avez-vous des profils sur les médias sociaux?",
+      "Connectons-nous sur les réseaux sociaux",
+      "Où puis-je vous suivre en ligne?",
+      "Réseaux sociaux"
+   ],
+   "responses": [
+      "Vous pouvez nous trouver sur les réseaux sociaux suivants :",
+      "Connectez-vous avec nous sur nos profils de médias sociaux :",
+      "Pour rester à jour, suivez-nous sur les réseaux sociaux :",
+      "Retrouvez-nous en ligne sur les plateformes suivantes :"
+   ],
+   "context_set": ""
+}
+]
+}
+
+
